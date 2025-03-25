@@ -11,6 +11,7 @@ const About = () => {
     "personal"
   );
   const [activeSection, setActiveSection] = useState(false);
+
   const handleTabClick = (tab: "personal" | "professional") => {
     setActiveTab(tab);
   };
@@ -195,7 +196,7 @@ const About = () => {
             </button>
             {activeSection && (
               <button
-                className="w-[150px] py-4 border-r text-[#607b96] border-[#1e2d3d] flex justify-center items-center gap-2 "
+                className="w-[150px] py-4 border-r text-[#607b96] border-[#1e2d3d] flex justify-center items-center gap-2"
                 onClick={() => (
                   handleTabClick("professional"), activeTab === "professional"
                 )}
@@ -255,12 +256,12 @@ const About = () => {
                     </p>
                     <motion.div
                       animate={{
-                        scale: [1, 1.4, 1], // გაიზარდოს და შემდეგ შემცირდეს
+                        scale: [1, 1.4, 1],
                         transition: {
-                          duration: 2.5, // რამდენი დრო უნდა გაატაროს თითოეულ ციკლში
-                          repeat: Infinity, // უსასრულო რეპეტიცია
-                          repeatType: "loop", // რეპეტიცია ციკლური
-                          ease: "easeInOut", // სლამია ან ექსპონენციური ეფექტი
+                          duration: 2.5,
+                          repeat: Infinity,
+                          repeatType: "loop",
+                          ease: "easeInOut",
                         },
                       }}
                       whileHover={{

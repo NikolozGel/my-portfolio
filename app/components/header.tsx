@@ -7,7 +7,6 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  console.log(isMenuOpen);
   const [activeTab, setActiveTab] = useState<
     "_Hello" | "_About-me" | "_Projects" | "_Contact-me"
   >("_Hello");
@@ -66,7 +65,7 @@ const Header = () => {
                   {tab.title}
                 </Link>
                 {activeTab === tab.title && (
-                  <div className="border-b-[3px] border-b-[#FEA55F] absolute w-full  h-1  bottom-0 left-0"></div>
+                  <div className="border-b-[3px] border-b-[#FEA55F] absolute w-full h-1 bottom-0 left-0"></div>
                 )}
               </motion.li>
             ))}

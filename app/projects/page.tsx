@@ -2,10 +2,12 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import data from "../../data.json";
-
+import Image from "next/image";
 const Projects = () => {
   const [techStacks, setTechStacks] = useState(true);
   const [selectedTechStacks, setSelectedTechStacks] = useState<string[]>([]);
+
+  const [isHovered, setIsHovered] = useState<number | null>(null);
 
   const handleCheckboxChange = (name: string) => {
     setSelectedTechStacks((prevSelectedTechStacks) => {
@@ -13,6 +15,10 @@ const Projects = () => {
         ? prevSelectedTechStacks.filter((techName) => techName !== name)
         : [...prevSelectedTechStacks, name];
     });
+  };
+
+  const handleRemoveTech = (name: string) => {
+    setSelectedTechStacks((prev) => prev.filter((tech) => tech !== name));
   };
 
   return (
@@ -58,6 +64,7 @@ const Projects = () => {
                           <input
                             type="checkbox"
                             id={`tech-${item.id}`}
+                            checked={selectedTechStacks.includes(item.name)}
                             onChange={() => handleCheckboxChange(item.name)}
                           />
                           <label
@@ -74,47 +81,84 @@ const Projects = () => {
               </AnimatePresence>
             </ul>
           </nav>
-
-          <div className="ml-4 mt-24">
-            <span className="text-white font-[450] lg:hidden">
-              {"// projects "}
-            </span>
-            <span className="text-[#607b96] font-semibold">
-              {selectedTechStacks.length > 0
-                ? `/${selectedTechStacks.join("; ")}`
-                : ""}
-            </span>
-          </div>
         </div>
 
-        <div className="flex flex-wrap gap-5 w-full m-auto justify-evenly overflow-y-auto mt-14 px-20">
-          <div className="bg-red-500 w-[400px] h-[330px]">
-            <h1 className="text-white text-xl">Project 1</h1>
-            <div className="">ss</div>
+        <div>
+          <div className="xl:flex border-b border-[#1e2d3d]">
+            <AnimatePresence>
+              {selectedTechStacks.length > 0 && (
+                <motion.div
+                  className="flex"
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
+                >
+                  {selectedTechStacks.map((tech, index) => (
+                    <motion.button
+                      key={tech}
+                      className="px-5 py-4 group border-r text-[#607b96] relative text-lg border-[#1e2d3d] flex items-center justify-center"
+                      initial={{ opacity: 0, x: -50 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, y: -20 }}
+                      transition={{ duration: 0.7 }}
+                      onMouseEnter={() => setIsHovered(index)}
+                      onMouseLeave={() => setIsHovered(null)}
+                    >
+                      {isHovered === index && (
+                        <motion.div
+                          className="border-b-[3.4px] border-b-[#1e2d3d] absolute bottom-0 left-0"
+                          initial={{ width: 0 }}
+                          animate={{ width: "100%" }}
+                          transition={{ duration: 0.4 }}
+                        />
+                      )}
+
+                      {tech}
+                      <Image
+                        src={"/assets/shared/delete.png"}
+                        width={12}
+                        height={12}
+                        className="w-[12px] h-[12px] ml-5"
+                        alt="deleteImage"
+                        onClick={() => handleRemoveTech(tech)}
+                      />
+                    </motion.button>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
-          <div className="bg-red-500 w-[400px] h-[330px]">
-            <h1 className="text-white text-xl">Project 1</h1>
-            <div className="">ss</div>
-          </div>
-          <div className="bg-red-500 w-[400px] h-[330px]">
-            <h1 className="text-white text-xl">Project 1</h1>
-            <div className="">ss</div>
-          </div>
-          <div className="bg-red-500 w-[400px] h-[330px]">
-            <h1 className="text-white text-xl">Project 1</h1>
-            <div className="">ss</div>
-          </div>
-          <div className="bg-red-500 w-[400px] h-[330px]">
-            <h1 className="text-white text-xl">Project 1</h1>
-            <div className="">ss</div>
-          </div>
-          <div className="bg-red-500 w-[400px] h-[330px]">
-            <h1 className="text-white text-xl">Project 1</h1>
-            <div className="">ss</div>
-          </div>
-          <div className="bg-red-500 w-[400px] h-[330px]">
-            <h1 className="text-white text-xl">Project 1</h1>
-            <div className="">ss</div>
+
+          <div className="flex flex-wrap gap-5 w-full m-auto justify-evenly overflow-y-auto mt-14 px-20">
+            <div className="bg-red-500 w-[400px] h-[330px]">
+              <h1 className="text-white text-xl">Project 1</h1>
+              <div className="">ss</div>
+            </div>
+            <div className="bg-red-500 w-[400px] h-[330px]">
+              <h1 className="text-white text-xl">Project 1</h1>
+              <div className="">ss</div>
+            </div>
+            <div className="bg-red-500 w-[400px] h-[330px]">
+              <h1 className="text-white text-xl">Project 1</h1>
+              <div className="">ss</div>
+            </div>
+            <div className="bg-red-500 w-[400px] h-[330px]">
+              <h1 className="text-white text-xl">Project 1</h1>
+              <div className="">ss</div>
+            </div>
+            <div className="bg-red-500 w-[400px] h-[330px]">
+              <h1 className="text-white text-xl">Project 1</h1>
+              <div className="">ss</div>
+            </div>
+            <div className="bg-red-500 w-[400px] h-[330px]">
+              <h1 className="text-white text-xl">Project 1</h1>
+              <div className="">ss</div>
+            </div>
+            <div className="bg-red-500 w-[400px] h-[330px]">
+              <h1 className="text-white text-xl">Project 1</h1>
+              <div className="">ss</div>
+            </div>
           </div>
         </div>
       </div>

@@ -43,7 +43,7 @@ export default function Home() {
             <span className="text-[#43D9AD] xl:text-2xl">githubLink </span>
             <span className="text-white xl:text-2xl"> = </span>
             <span className="break-words text-[#e99287] xl:text-2xl underline">
-              <Link href={"https://github.com/nikolozgel"} target="_blank">
+              <Link href="https://github.com/nikolozgel" target="_blank">
                 https://
                 <br className="xl:hidden" />
                 github.com/nikolozgel
