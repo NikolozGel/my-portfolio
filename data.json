@@ -54,5 +54,21 @@
       "name": "Rest API",
       "logo": "/assets/skills/icons8-rest-api-96.png"
     }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "github-user-search",
+      "techstack": ["React", "Tailwind CSS", "TypeScript"],
+      "img": "/assets/projects/github-user-search.png",
+      "liveLink": "https://github-user-search-app-seven-gold.vercel.app/"
+    },
+    {
+      "id": 2,
+      "name": "interactive-rating-component",
+      "techstack": ["React", "Tailwind CSS", "TypeScript"],
+      "img": "/assets/projects/interactive-rating-component.png",
+      "liveLink": "https://interactive-rating-components-rho.vercel.app/"
+    }
   ]
 }

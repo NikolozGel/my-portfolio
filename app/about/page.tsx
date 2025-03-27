@@ -64,8 +64,8 @@ const About = () => {
                 <div className="flex items-center cursor-pointer">
                   <motion.img
                     src="/assets/shared/triangle.png"
-                    width={9}
-                    height={9}
+                    width={12}
+                    height={12}
                     alt="toggle arrow"
                     className="mr-4"
                     initial={{ rotate: 360 }}
@@ -94,8 +94,8 @@ const About = () => {
                         >
                           <motion.img
                             src="/assets/shared/arrow.png"
-                            width={6}
-                            height={6}
+                            width={10}
+                            height={10}
                             alt="arrow"
                             className="mr-4"
                             initial={{ rotate: 360 }}
@@ -126,8 +126,8 @@ const About = () => {
                 <div className="flex items-center cursor-pointer">
                   <motion.img
                     src="/assets/shared/triangle.png"
-                    width={9}
-                    height={9}
+                    width={12}
+                    height={12}
                     alt="arrow"
                     className="mr-4"
                     initial={{ rotate: 360 }}

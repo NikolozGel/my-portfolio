@@ -3,6 +3,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import data from "../../data.json";
 import Image from "next/image";
+import ProjectCard from "../components/Projects";
+import MyProjects from "../../data.json";
+
 const Projects = () => {
   const [techStacks, setTechStacks] = useState(true);
   const [selectedTechStacks, setSelectedTechStacks] = useState<string[]>([]);
@@ -24,7 +27,7 @@ const Projects = () => {
   return (
     <div className="bg-[#011627] border-x border-b rounded-b-lg border-[#1e2d3d] h-[86vh] overflow-y-auto">
       <div className="xl:flex">
-        <div className="border-r border-[#1e2d3d]">
+        <div className="border-r border-[#1e2d3d] h-[81vh]">
           <h1 className="text-white font-semibold text-base pl-5 mb-5 pt-4">
             _projects
           </h1>
@@ -84,7 +87,7 @@ const Projects = () => {
         </div>
 
         <div>
-          <div className="xl:flex border-b border-[#1e2d3d]">
+          <div className="hidden xl:flex border-b border-[#1e2d3d]">
             <AnimatePresence>
               {selectedTechStacks.length > 0 && (
                 <motion.div
@@ -129,36 +132,20 @@ const Projects = () => {
               )}
             </AnimatePresence>
           </div>
-
-          <div className="flex flex-wrap gap-5 w-full m-auto justify-evenly overflow-y-auto mt-14 px-20">
-            <div className="bg-red-500 w-[400px] h-[330px]">
-              <h1 className="text-white text-xl">Project 1</h1>
-              <div className="">ss</div>
-            </div>
-            <div className="bg-red-500 w-[400px] h-[330px]">
-              <h1 className="text-white text-xl">Project 1</h1>
-              <div className="">ss</div>
-            </div>
-            <div className="bg-red-500 w-[400px] h-[330px]">
-              <h1 className="text-white text-xl">Project 1</h1>
-              <div className="">ss</div>
-            </div>
-            <div className="bg-red-500 w-[400px] h-[330px]">
-              <h1 className="text-white text-xl">Project 1</h1>
-              <div className="">ss</div>
-            </div>
-            <div className="bg-red-500 w-[400px] h-[330px]">
-              <h1 className="text-white text-xl">Project 1</h1>
-              <div className="">ss</div>
-            </div>
-            <div className="bg-red-500 w-[400px] h-[330px]">
-              <h1 className="text-white text-xl">Project 1</h1>
-              <div className="">ss</div>
-            </div>
-            <div className="bg-red-500 w-[400px] h-[330px]">
-              <h1 className="text-white text-xl">Project 1</h1>
-              <div className="">ss</div>
-            </div>
+          <div className="mt-10 flex ml-5">
+            <p className="text-white text-lg xl:hidden">
+              {"//"} projects
+              {selectedTechStacks.length !== 0 && (
+                <span className="text-gray-500 text-lg ml-5">
+                  {`/${selectedTechStacks.join("; ")}`}
+                </span>
+              )}
+            </p>
+          </div>
+          <div className="grid grid-cols-3">
+            {MyProjects.projects.map((project) => (
+              <ProjectCard key={project.id} {...project} />
+            ))}
           </div>
         </div>
       </div>
