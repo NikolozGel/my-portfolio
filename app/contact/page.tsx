@@ -93,6 +93,7 @@ const Contact = () => {
       },
       body: JSON.stringify(formData),
     });
+    console.log(response);
   };
 
   const toggleSection = (section: "contacts" | "findMe") => {
