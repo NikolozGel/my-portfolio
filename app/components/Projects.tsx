@@ -26,6 +26,7 @@ const ProjectCard = ({ id, name, techstack, img, liveLink }: IProjects) => {
               className="object-cover m-w-[350px] h-[216px]"
             />
           </div>
+          <h1 className="hidden">{techstack}</h1>
 
           <div className="bg-[#011221] p-8">
             <p className="text-[#607B96]">{name}</p>

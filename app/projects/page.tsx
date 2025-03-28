@@ -1,6 +1,6 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import data from "../../data.json";
 import Image from "next/image";
 import ProjectCard from "../components/Projects";
@@ -10,9 +10,8 @@ import Link from "next/link";
 const Projects = () => {
   const [techStacks, setTechStacks] = useState(true);
   const [selectedTechStacks, setSelectedTechStacks] = useState<string[]>([]);
-
+  const [filteredProjects, setFilteredProjects] = useState(MyProjects.projects);
   const [isHovered, setIsHovered] = useState<number | null>(null);
-
   const handleCheckboxChange = (name: string) => {
     setSelectedTechStacks((prevSelectedTechStacks) => {
       return prevSelectedTechStacks.includes(name)
@@ -23,6 +22,28 @@ const Projects = () => {
 
   const handleRemoveTech = (name: string) => {
     setSelectedTechStacks((prev) => prev.filter((tech) => tech !== name));
+  };
+
+  useEffect(() => {
+    if (selectedTechStacks.length === 0) {
+      setFilteredProjects(MyProjects.projects);
+    } else {
+      const filtered = MyProjects.projects.filter((project) =>
+        selectedTechStacks.every((tech) => project.techstack.includes(tech))
+      );
+      setFilteredProjects(filtered);
+    }
+  }, [selectedTechStacks]);
+
+  const handleFilter = () => {
+    if (selectedTechStacks.length === 0) {
+      setFilteredProjects(MyProjects.projects);
+    } else {
+      const filtered = MyProjects.projects.filter((project) =>
+        selectedTechStacks.every((tech) => project.techstack.includes(tech))
+      );
+      setFilteredProjects(filtered);
+    }
   };
 
   return (
@@ -69,7 +90,10 @@ const Projects = () => {
                             type="checkbox"
                             id={`tech-${item.id}`}
                             checked={selectedTechStacks.includes(item.name)}
-                            onChange={() => handleCheckboxChange(item.name)}
+                            onChange={() => {
+                              handleCheckboxChange(item.name);
+                              handleFilter();
+                            }}
                           />
                           <label
                             htmlFor={`tech-${item.id}`}
@@ -88,7 +112,7 @@ const Projects = () => {
         </div>
 
         <div className="xl:ml-[250px]">
-          <div className="hidden xl:flex border-b border-[#1e2d3d]">
+          <div className="hidden xl:flex  border-b w-screen border-[#1e2d3d]">
             <AnimatePresence>
               {selectedTechStacks.length > 0 && (
                 <motion.div
@@ -101,7 +125,7 @@ const Projects = () => {
                   {selectedTechStacks.map((tech, index) => (
                     <motion.button
                       key={tech}
-                      className="px-5 py-4 group border-r text-[#607b96] relative text-lg border-[#1e2d3d] flex items-center justify-center"
+                      className="px-5 py-4 group text-[#607b96] relative text-lg border-r border-[#1e2d3d] flex items-center justify-center"
                       initial={{ opacity: 0, x: -50 }}
                       animate={{ opacity: 1, x: 0 }}
                       exit={{ opacity: 0, y: -20 }}
@@ -145,7 +169,7 @@ const Projects = () => {
           </div>
           <div className="px-5 mb-48">
             <div className="flex justify-evenly flex-wrap gap-24">
-              {MyProjects.projects.map((project) => (
+              {filteredProjects.map((project) => (
                 <ProjectCard key={project.id} {...project} />
               ))}
             </div>

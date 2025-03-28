@@ -59,7 +59,7 @@
     {
       "id": 1,
       "name": "github-user-search",
-      "techstack": ["React", "Tailwind CSS", "TypeScript"],
+      "techstack": ["React", "Tailwind CSS", "TypeScript", "Javascript"],
       "img": "/assets/projects/github-user-search.png",
       "liveLink": "https://github-user-search-app-seven-gold.vercel.app/"
     },
@@ -73,14 +73,14 @@
     {
       "id": 3,
       "name": "interactive-rating-component",
-      "techstack": ["React", "Tailwind CSS", "TypeScript"],
+      "techstack": ["Rest API", "Tailwind CSS", "Next"],
       "img": "/assets/projects/interactive-rating-component.png",
       "liveLink": "https://interactive-rating-components-rho.vercel.app/"
     },
     {
       "id": 4,
       "name": "interactive-rating-component",
-      "techstack": ["React", "Tailwind CSS", "TypeScript"],
+      "techstack": ["React", "Tailwind CSS", "Rest API"],
       "img": "/assets/projects/interactive-rating-component.png",
       "liveLink": "https://interactive-rating-components-rho.vercel.app/"
     },
@@ -143,7 +143,7 @@
     {
       "id": 25,
       "name": "interactive-rating-component",
-      "techstack": ["React", "Tailwind CSS", "TypeScript"],
+      "techstack": ["Node", "Tailwind CSS", "TypeScript"],
       "img": "/assets/projects/interactive-rating-component.png",
       "liveLink": "https://interactive-rating-components-rho.vercel.app/"
     }

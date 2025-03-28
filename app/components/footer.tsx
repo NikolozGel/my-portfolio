@@ -1,6 +1,10 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import gitHubIcon from "../../public/assets/contact-icons/github.svg";
+import FbIcon from "../../public/assets/contact-icons/facebook.svg";
+import Linkedin from "../../public/assets/contact-icons/linkedin.svg";
+
 const Footer = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
   return (
     <>
@@ -23,12 +27,7 @@ const Footer = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <Image
-                    src="/assets/contact-icons/facebook.svg"
-                    width={30}
-                    height={30}
-                    alt="Facebook"
-                  />
+                  <Image src={FbIcon} width={30} height={30} alt={FbIcon} />
                 </a>
               </div>
               <div className="border-l border-[#1E2D3D] p-3">
@@ -37,12 +36,7 @@ const Footer = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <Image
-                    src="/assets/contact-icons/linkedin.svg"
-                    width={30}
-                    height={30}
-                    alt="LinkedIn"
-                  />
+                  <Image src={Linkedin} width={30} height={30} alt={Linkedin} />
                 </a>
               </div>
             </div>
@@ -58,10 +52,10 @@ const Footer = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
                   </span>
 
                   <Image
-                    src="/assets/contact-icons/github.svg"
+                    src={gitHubIcon}
                     width={30}
                     height={30}
-                    alt="GitHub"
+                    alt={gitHubIcon}
                   />
                 </div>
               </a>

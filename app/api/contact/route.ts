@@ -1,6 +1,6 @@
 import nodemailer from "nodemailer";
 
-export async function POST(req: Request, res: Response) {
+export async function POST(req: Request) {
   try {
     const body = await req.json();
     console.log(body);
@@ -31,6 +31,7 @@ export async function POST(req: Request, res: Response) {
     return Response.json({
       message: "Email Sent successfully",
     });
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {
     return Response.json({
       error: "Error sending email",
