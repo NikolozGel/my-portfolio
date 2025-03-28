@@ -5,6 +5,7 @@ import data from "../../data.json";
 import Image from "next/image";
 import ProjectCard from "../components/Projects";
 import MyProjects from "../../data.json";
+import Link from "next/link";
 
 const Projects = () => {
   const [techStacks, setTechStacks] = useState(true);
@@ -26,8 +27,8 @@ const Projects = () => {
 
   return (
     <div className="bg-[#011627] border-x border-b rounded-b-lg border-[#1e2d3d] h-[86vh] overflow-y-auto">
-      <div className="xl:flex">
-        <div className="border-r border-[#1e2d3d] h-[81vh]">
+      <div className="xl:flex ">
+        <div className="border-r border-[#1e2d3d] xl:h-[85vh] xl:fixed">
           <h1 className="text-white font-semibold text-base pl-5 mb-5 pt-4">
             _projects
           </h1>
@@ -86,7 +87,7 @@ const Projects = () => {
           </nav>
         </div>
 
-        <div>
+        <div className="xl:ml-[250px]">
           <div className="hidden xl:flex border-b border-[#1e2d3d]">
             <AnimatePresence>
               {selectedTechStacks.length > 0 && (
@@ -132,7 +133,7 @@ const Projects = () => {
               )}
             </AnimatePresence>
           </div>
-          <div className="mt-10 flex ml-5">
+          <div className="mt-10 mb-5 flex ml-5">
             <p className="text-white text-lg xl:hidden">
               {"//"} projects
               {selectedTechStacks.length !== 0 && (
@@ -142,10 +143,19 @@ const Projects = () => {
               )}
             </p>
           </div>
-          <div className="grid grid-cols-3">
-            {MyProjects.projects.map((project) => (
-              <ProjectCard key={project.id} {...project} />
-            ))}
+          <div className="px-5 mb-48">
+            <div className="flex justify-evenly flex-wrap gap-24">
+              {MyProjects.projects.map((project) => (
+                <ProjectCard key={project.id} {...project} />
+              ))}
+            </div>
+            <Link href="https://github.com/NikolozGel" target="_blank">
+              <div className="flex justify-center mt-10">
+                <button className="bg-[#5565E8] py-2.5 px-3.5 text-xl font-bold rounded-lg">
+                  SEE MORE ON GITHUB
+                </button>
+              </div>
+            </Link>
           </div>
         </div>
       </div>

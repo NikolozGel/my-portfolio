@@ -14,16 +14,19 @@ interface IProjects {
 const ProjectCard = ({ id, name, techstack, img, liveLink }: IProjects) => {
   return (
     <>
-      <div>
-        <p className="text-lg text-[#4D5BCE] ">Project {id}</p>
+      <div className="w-[370px]">
+        <p className="text-lg text-[#4D5BCE] mb-3">Project {id}</p>
         <div className="border border-[#1e2d3d] rounded-xl overflow-hidden">
-          <Image
-            src={img}
-            width={500}
-            height={500}
-            alt={img}
-            className="object-cover m-w-[370px] h-[250px]"
-          />
+          <div>
+            <Image
+              src={img}
+              width={410}
+              height={400}
+              alt={img}
+              className="object-cover m-w-[350px] h-[216px]"
+            />
+          </div>
+
           <div className="bg-[#011221] p-8">
             <p className="text-[#607B96]">{name}</p>
             <div className="flex justify-between mt-3">
