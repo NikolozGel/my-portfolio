@@ -59,18 +59,16 @@ export default function Home() {
           className="hidden xl:flex flex-col gap-[10px] absolute right-[10%] top-[7%]"
         >
           {[
-            ...Array(3)
-              .fill(null)
-              .map((_, index) => (
-                <Image
-                  key={index}
-                  src={SnippetImage}
-                  width={580}
-                  height={200}
-                  alt="code-snippet-image"
-                  className="opacity-50"
-                />
-              )),
+            Array.from({ length: 3 }, (_, index) => (
+              <Image
+                key={index}
+                src={SnippetImage}
+                width={580}
+                height={200}
+                alt="code-snippet-image"
+                className="opacity-50"
+              />
+            )),
           ]}
         </motion.div>
       </section>
