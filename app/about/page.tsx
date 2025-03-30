@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-
 import AboutMeSection from "../components/AboutMeSection";
 import ProfileTabs from "../components/ProfileTabs";
 import InfoAndSkillsSection from "../components/InfoAndSkillsSection";

@@ -64,8 +64,8 @@ const Projects = () => {
                 >
                   <motion.img
                     src={"/assets/shared/triangle.png"}
-                    width={9}
-                    height={9}
+                    width={12}
+                    height={12}
                     alt="arrow"
                     className="mr-4"
                     initial={{ rotate: 360 }}

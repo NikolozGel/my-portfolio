@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FormEvent, useState } from "react";
 import Image from "next/image";
 import ContactForm from "../components/ContactForm";
+import Link from "next/link";
 
 const Accordion = ({
   title,
@@ -24,11 +25,11 @@ const Accordion = ({
         <div className="flex items-center cursor-pointer">
           <motion.img
             src="/assets/shared/triangle.png"
-            width={9}
-            height={9}
+            width={12}
+            height={12}
             alt="arrow"
             className="mr-4"
-            initial={{ rotate: 360 }}
+            initial={{ rotate: 270 }}
             animate={{ rotate: isOpen ? 360 : 270 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
           />
@@ -116,30 +117,34 @@ const Contact = () => {
             onToggle={() => toggleSection("contacts")}
           >
             <ul className="ml-5 flex flex-col gap-2 py-2">
-              <li className="flex items-center">
-                <Image
-                  src="/assets/contact-icons/mail-icon.png"
-                  width={10}
-                  height={10}
-                  alt="mail"
-                  className="mr-3"
-                />
-                <p className="text-[#607b96] font-semibold">
-                  nikolozgelenidze9@gmail.com
-                </p>
-              </li>
-              <li className="flex items-center ">
-                <Image
-                  src="/assets/contact-icons/phone-icon.png"
-                  width={10}
-                  height={10}
-                  alt="phone-icon"
-                  className="mr-3"
-                />
-                <p className="text-[#607b96] font-semibold">
-                  +(995) 511 10 60 81
-                </p>
-              </li>
+              <Link href={"mailto:nikolozgelenidze9@gmail.com"} target="_blank">
+                <li className="flex items-center">
+                  <Image
+                    src="/assets/contact-icons/mail-icon.png"
+                    width={10}
+                    height={10}
+                    alt="mail"
+                    className="mr-3"
+                  />
+                  <p className="text-[#607b96] font-semibold">
+                    nikolozgelenidze9@gmail.com
+                  </p>
+                </li>
+              </Link>
+              <Link href={"tel:+995511106081"} target="_blank">
+                <li className="flex items-center ">
+                  <Image
+                    src="/assets/contact-icons/phone-icon.png"
+                    width={10}
+                    height={10}
+                    alt="phone-icon"
+                    className="mr-3"
+                  />
+                  <p className="text-[#607b96] font-semibold">
+                    +(995) 511 10 60 81
+                  </p>
+                </li>
+              </Link>
             </ul>
           </Accordion>
 
@@ -154,29 +159,38 @@ const Contact = () => {
                   src: "/assets/shared/link.png",
                   alt: "Facebook",
                   text: "Facebook",
+                  link: "https://www.facebook.com/NikolozGG/",
                 },
                 {
                   src: "/assets/shared/link.png",
                   alt: "Instagram",
                   text: "Instagram",
+                  link: "https://www.instagram.com/nikushagelenidze/",
                 },
                 {
                   src: "/assets/shared/link.png",
                   alt: "LinkedIn",
                   text: "LinkedIn",
+                  link: "https://www.linkedin.com/in/nikoloz-gelenidze/",
                 },
-              ].map(({ src, alt, text }) => (
-                <li key={alt} className="flex items-center ml-5">
-                  <Image
-                    src={src}
-                    width={10}
-                    height={10}
-                    alt={alt}
-                    className="mr-3"
-                  />
-                  <p className="text-[#607b96] font-semibold break-words">
-                    {text}
-                  </p>
+              ].map(({ src, alt, text, link }) => (
+                <li key={alt}>
+                  <Link
+                    href={link}
+                    className="flex items-center ml-5"
+                    target="_blank"
+                  >
+                    <Image
+                      src={src}
+                      width={10}
+                      height={10}
+                      alt={alt}
+                      className="mr-3"
+                    />
+                    <p className="text-[#607b96] font-semibold break-words">
+                      {text}
+                    </p>
+                  </Link>
                 </li>
               ))}
             </ul>
