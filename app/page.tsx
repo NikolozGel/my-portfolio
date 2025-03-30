@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import SnippetImage from "../public/assets/shared/code-snippet-no-opacity.svg";
 
 export default function Home() {
   return (
@@ -23,7 +24,6 @@ export default function Home() {
           <p className="text-md xl:text-3xl text-[#4d5bce] font-semibold">
             {"> "}Front-End developer
           </p>
-          ``
         </motion.div>
 
         <div className="absolute bottom-[12%] xl:bottom-[32%]">
@@ -56,28 +56,22 @@ export default function Home() {
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="hidden xl:flex flex-col gap-[10px] absolute right-[10%] top-[6%]"
+          className="hidden xl:flex flex-col gap-[10px] absolute right-[10%] top-[7%]"
         >
-          <Image
-            src={"/assets/shared/code-snippet-no-opacity.svg"}
-            width={580}
-            height={200}
-            alt="code-snippet-image"
-            className="opacity-50"
-          />
-          <Image
-            src={"/assets/shared/code-snippet-no-opacity.svg"}
-            width={580}
-            height={200}
-            alt="code-snippet-image"
-          />
-          <Image
-            src={"/assets/shared/code-snippet-no-opacity.svg"}
-            width={580}
-            height={200}
-            alt="code-snippet-image"
-            className="opacity-50"
-          />
+          {[
+            ...Array(3)
+              .fill(null)
+              .map((_, index) => (
+                <Image
+                  key={index}
+                  src={SnippetImage}
+                  width={580}
+                  height={200}
+                  alt="code-snippet-image"
+                  className="opacity-50"
+                />
+              )),
+          ]}
         </motion.div>
       </section>
     </>

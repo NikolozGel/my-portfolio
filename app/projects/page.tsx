@@ -12,6 +12,7 @@ const Projects = () => {
   const [selectedTechStacks, setSelectedTechStacks] = useState<string[]>([]);
   const [filteredProjects, setFilteredProjects] = useState(MyProjects.projects);
   const [isHovered, setIsHovered] = useState<number | null>(null);
+
   const handleCheckboxChange = (name: string) => {
     setSelectedTechStacks((prevSelectedTechStacks) => {
       return prevSelectedTechStacks.includes(name)
@@ -111,8 +112,8 @@ const Projects = () => {
           </nav>
         </div>
 
-        <div className="xl:ml-[250px]">
-          <div className="hidden xl:flex  border-b w-screen border-[#1e2d3d]">
+        <div className="xl:ml-[250px] w-full">
+          <div className="hidden xl:flex  border-b w-full border-[#1e2d3d]">
             <AnimatePresence>
               {selectedTechStacks.length > 0 && (
                 <motion.div
