@@ -67,6 +67,9 @@ const Contact = () => {
     message: "",
   });
 
+  const [isLoading, setIsLoading] = useState(false);
+  const [submit, setSubmit] = useState<null | boolean>(false);
+
   const today = new Date();
   const date = today.toString().split(" ").slice(0, 3).join(" ");
 
@@ -82,19 +85,38 @@ const Contact = () => {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    setIsLoading(true);
+    setSubmit(null);
 
-    if (!formData.name || !formData.message || formData.message.trim() == "") {
-      return;
+    try {
+      if (
+        !formData.name ||
+        !formData.message ||
+        formData.message.trim() == ""
+      ) {
+        return;
+      }
+
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        setSubmit(false);
+        throw new Error("Failed to submit form.");
+      }
+
+      setSubmit(true);
+    } catch (error) {
+      console.log(error);
+      setSubmit(false);
+    } finally {
+      setIsLoading(false);
     }
-
-    const response = await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
-    console.log(response);
   };
 
   const toggleSection = (section: "contacts" | "findMe") => {
@@ -107,7 +129,7 @@ const Contact = () => {
   return (
     <div className="bg-[#011627] border-x border-b rounded-b-lg border-[#1e2d3d] relative h-[86vh] overflow-y-auto scroll-container">
       <div className="xl:flex xl:h-full">
-        <div className="xl:w-[20%] border-r border-[#1e2d3d]">
+        <div className="xl:w-[25%] border-r border-[#1e2d3d]">
           <h1 className="text-white font-semibold text-base pl-5 my-5">
             _contact-me
           </h1>
@@ -200,6 +222,9 @@ const Contact = () => {
           <ContactForm
             handleSubmit={handleSubmit}
             handleInputChange={handleInputChange}
+            isLoading={isLoading}
+            submit={submit}
+            setSubmit={setSubmit}
           />
         </div>
 
