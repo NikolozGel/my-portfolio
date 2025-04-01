@@ -28,8 +28,8 @@ const ContactForm: React.FC<ContactFormProps> = ({
       ) : submit ? (
         <Submit setSubmit={setSubmit} />
       ) : (
-        <form onSubmit={handleSubmit}>
-          <div className="flex flex-col mt-5 p-5 xl:px-36">
+        <form onSubmit={handleSubmit} className="h-full">
+          <div className="flex flex-col p-5 xl:px-36">
             <label htmlFor="name" className="text-[#607b96] mb-1 font-medium">
               _name:
             </label>

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const Loading = () => {
   return (
-    <div className="flex items-center justify-center mt-80">
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
       <motion.div
         className="spinner flex"
         animate={{

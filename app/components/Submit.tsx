@@ -6,7 +6,7 @@ const Submit = ({
   setSubmit: Dispatch<SetStateAction<boolean | null>>;
 }) => {
   return (
-    <div className="flex flex-col items-center mt-48 py-14 px-[15%]">
+    <div className="absolute flex flex-col items-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
       <h1 className="text-3xl text-white font-semibold">Thank You! 😎</h1>
       <p className="text-[#607b96] text-center text-xl my-5">
         Your message has been accepted. you will recieve answer really soon!
