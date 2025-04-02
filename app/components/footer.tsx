@@ -15,7 +15,7 @@ const Footer = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
         transition={{ duration: 0.9 }}
         className={`${
           isMenuOpen ? "block" : "hidden xl:block"
-        } border border-[#1E2D3D] bg-[#011627] rounded-b-lg absolute  bottom-[-1px] left-[-2px] right-[-2px] xl:left-14 xl:right-14`}
+        } border border-[#1E2D3D] bg-[#011627] rounded-b-lg absolute bottom-[-1px] left-[-2px] right-[-2px] xl:left-14 xl:right-14`}
       >
         <div className="flex justify-between items-center px-3">
           <p className="text-[#607B96]">find me in:</p>

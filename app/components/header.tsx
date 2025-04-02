@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 import NavigationMenu from "./NavigationMenu";
 import { AnimatePresence } from "framer-motion";
-import Navbar from "./Navbar";
+import Navigation from "./Navigation";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,7 +13,6 @@ const Header = () => {
       <h1 className="text-[#607b96] text-lg font-semibold xl:p-4 xl:-mr-[500px]">
         Nikoloz-Gelenidze
       </h1>
-
       <Image
         src={`${
           isMenuOpen
@@ -26,7 +25,7 @@ const Header = () => {
         onClick={() => setIsMenuOpen((prev) => !prev)}
         className="block xl:hidden cursor-pointer"
       />
-      <Navbar />
+      <Navigation />
 
       <AnimatePresence>
         {isMenuOpen && (

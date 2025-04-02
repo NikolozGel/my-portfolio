@@ -11,6 +11,7 @@ interface IProjects {
   img: string;
   liveLink: string;
   techStackImage: string[];
+  github: string;
 }
 
 const ProjectCard = ({
@@ -19,13 +20,14 @@ const ProjectCard = ({
   techStackImage,
   img,
   liveLink,
+  github,
 }: IProjects) => {
   const [isHover, setIsHover] = useState(false);
   console.log(isHover);
   return (
     <>
       <div className="w-[370px]">
-        <p className="text-lg text-[#4D5BCE] mb-3">Project {id}</p>
+        <p className="text-lg text-[#4D5BCE] mb-4 font-bold">Project {id}</p>
         <AnimatePresence>
           <motion.div
             onHoverStart={() => setIsHover(true)}
@@ -45,14 +47,17 @@ const ProjectCard = ({
               <div className="bg-[#011221] p-12">
                 <p className="text-[#607B96]">{name}</p>
                 <div className="flex justify-between mt-3">
-                  <button className="bg-[#1C2B3A] text-white text-lg rounded-md py-2.5 px-3.5 hover:text-[#4D5BCE] ">
-                    view-project
-                  </button>
+                  <Link href={liveLink} target="_blank">
+                    <button className="bg-[#1C2B3A] text-white text-lg rounded-md py-2.5 px-3.5 hover:text-[#4D5BCE]">
+                      view-project
+                    </button>
+                  </Link>
+
                   <motion.div
                     whileHover={{ scale: 1.3 }}
                     transition={{ duration: 0.6 }}
                   >
-                    <Link href={liveLink} target="_blank">
+                    <Link href={github} target="_blank">
                       <Image
                         src={GithubIcon}
                         width={50}

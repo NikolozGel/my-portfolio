@@ -66,7 +66,8 @@
         "/assets/skills/tailwind.png"
       ],
       "img": "/assets/projects/github-user-search.png",
-      "liveLink": "https://github-user-search-app-seven-gold.vercel.app/"
+      "liveLink": "https://github-user-search-app-seven-gold.vercel.app/",
+      "github": "https://github.com/NikolozGel/github-user-search-app"
     },
     {
       "id": 2,
@@ -78,7 +79,8 @@
         "/assets/skills/tailwind.png"
       ],
       "img": "/assets/projects/interactive-rating-component.png",
-      "liveLink": "https://interactive-rating-components-rho.vercel.app/"
+      "liveLink": "https://interactive-rating-components-rho.vercel.app/",
+      "github": "https://github.com/NikolozGel/interactive-rating-components"
     }
   ]
 }
