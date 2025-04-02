@@ -1,10 +1,10 @@
 "use client";
 import { FormEvent, useState } from "react";
-import ContactForm from "../components/ContactForm";
-import Accordion from "../components/Accordion";
-import CodeSnippet from "../components/CodeSnippet";
-import AccordionContact from "../components/AccordionContact";
-import AccordionFindMe from "../components/AccordionFindMe";
+import ContactForm from "../components/contactForm/ContactForm";
+import Accordion from "../components/accordion/Accordion";
+import CodeSnippet from "../components/accordion/CodeSnippet";
+import AccordionContact from "../components/accordion/AccordionContact";
+import AccordionFindMe from "../components/accordion/AccordionFindMe";
 
 const Contact = () => {
   const [expandedSections, setExpandedSections] = useState<{

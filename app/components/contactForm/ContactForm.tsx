@@ -1,8 +1,7 @@
 "use client";
-
 import { Dispatch, SetStateAction } from "react";
-import Loading from "./Loading";
-import Submit from "./Submit";
+import Loading from "../loadingSubmit/Loading";
+import Submit from "../loadingSubmit/Submit";
 
 interface ContactFormProps {
   handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;

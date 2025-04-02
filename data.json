@@ -60,6 +60,11 @@
       "id": 1,
       "name": "github-user-search",
       "techstack": ["React", "Tailwind CSS", "TypeScript", "Javascript"],
+      "techStackImage": [
+        "/assets/skills/reactLogo.png",
+        "/assets/skills/typescript.png",
+        "/assets/skills/tailwind.png"
+      ],
       "img": "/assets/projects/github-user-search.png",
       "liveLink": "https://github-user-search-app-seven-gold.vercel.app/"
     },
@@ -67,83 +72,11 @@
       "id": 2,
       "name": "interactive-rating-component",
       "techstack": ["React", "Tailwind CSS", "TypeScript"],
-      "img": "/assets/projects/interactive-rating-component.png",
-      "liveLink": "https://interactive-rating-components-rho.vercel.app/"
-    },
-    {
-      "id": 3,
-      "name": "interactive-rating-component",
-      "techstack": ["Rest API", "Tailwind CSS", "Next"],
-      "img": "/assets/projects/interactive-rating-component.png",
-      "liveLink": "https://interactive-rating-components-rho.vercel.app/"
-    },
-    {
-      "id": 4,
-      "name": "interactive-rating-component",
-      "techstack": ["React", "Tailwind CSS", "Rest API"],
-      "img": "/assets/projects/interactive-rating-component.png",
-      "liveLink": "https://interactive-rating-components-rho.vercel.app/"
-    },
-    {
-      "id": 13,
-      "name": "interactive-rating-component",
-      "techstack": ["React", "Tailwind CSS", "TypeScript"],
-      "img": "/assets/projects/interactive-rating-component.png",
-      "liveLink": "https://interactive-rating-components-rho.vercel.app/"
-    },
-    {
-      "id": 15,
-      "name": "interactive-rating-component",
-      "techstack": ["React", "Tailwind CSS", "TypeScript"],
-      "img": "/assets/projects/interactive-rating-component.png",
-      "liveLink": "https://interactive-rating-components-rho.vercel.app/"
-    },
-    {
-      "id": 19,
-      "name": "interactive-rating-component",
-      "techstack": ["React", "Tailwind CSS", "TypeScript"],
-      "img": "/assets/projects/interactive-rating-component.png",
-      "liveLink": "https://interactive-rating-components-rho.vercel.app/"
-    },
-    {
-      "id": 20,
-      "name": "interactive-rating-component",
-      "techstack": ["React", "Tailwind CSS", "TypeScript"],
-      "img": "/assets/projects/interactive-rating-component.png",
-      "liveLink": "https://interactive-rating-components-rho.vercel.app/"
-    },
-    {
-      "id": 21,
-      "name": "interactive-rating-component",
-      "techstack": ["React", "Tailwind CSS", "TypeScript"],
-      "img": "/assets/projects/interactive-rating-component.png",
-      "liveLink": "https://interactive-rating-components-rho.vercel.app/"
-    },
-    {
-      "id": 22,
-      "name": "interactive-rating-component",
-      "techstack": ["React", "Tailwind CSS", "TypeScript"],
-      "img": "/assets/projects/interactive-rating-component.png",
-      "liveLink": "https://interactive-rating-components-rho.vercel.app/"
-    },
-    {
-      "id": 23,
-      "name": "interactive-rating-component",
-      "techstack": ["React", "Tailwind CSS", "TypeScript"],
-      "img": "/assets/projects/interactive-rating-component.png",
-      "liveLink": "https://interactive-rating-components-rho.vercel.app/"
-    },
-    {
-      "id": 24,
-      "name": "interactive-rating-component",
-      "techstack": ["React", "Tailwind CSS", "TypeScript"],
-      "img": "/assets/projects/interactive-rating-component.png",
-      "liveLink": "https://interactive-rating-components-rho.vercel.app/"
-    },
-    {
-      "id": 25,
-      "name": "interactive-rating-component",
-      "techstack": ["Node", "Tailwind CSS", "TypeScript"],
+      "techStackImage": [
+        "/assets/skills/reactLogo.png",
+        "/assets/skills/typescript.png",
+        "/assets/skills/tailwind.png"
+      ],
       "img": "/assets/projects/interactive-rating-component.png",
       "liveLink": "https://interactive-rating-components-rho.vercel.app/"
     }
