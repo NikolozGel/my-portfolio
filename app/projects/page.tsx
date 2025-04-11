@@ -113,29 +113,29 @@ const Projects = () => {
         </div>
 
         <div className="xl:ml-[250px] w-full">
-          <div className="hidden xl:flex  border-b w-full border-[#1e2d3d]">
-            <AnimatePresence>
-              {selectedTechStacks.length > 0 && (
-                <motion.div
-                  className="flex"
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: "auto" }}
-                  exit={{ opacity: 0, height: 0 }}
-                  transition={{ duration: 0.5, ease: "easeInOut" }}
-                >
+          <AnimatePresence>
+            {selectedTechStacks.length > 0 && (
+              <motion.div
+                className=" hidden xl:flex border-b w-full border-[#1e2d3d]"
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+              >
+                <AnimatePresence>
                   {selectedTechStacks.map((tech, index) => (
                     <motion.button
                       key={tech}
                       className="px-5 py-4 group text-[#607b96] relative text-lg border-r border-[#1e2d3d] flex items-center justify-center"
                       initial={{ opacity: 0, x: -50 }}
                       animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, y: -20 }}
-                      transition={{ duration: 0.7 }}
+                      exit={{ opacity: 0, x: -50 }}
+                      transition={{ duration: 0.5 }}
                       onMouseEnter={() => setIsHovered(index)}
                       onMouseLeave={() => setIsHovered(null)}
                     >
                       {isHovered === index && (
-                        <motion.div
+                        <motion.span
                           className="border-b-[3.4px] border-b-[#1e2d3d] absolute bottom-0 left-0"
                           initial={{ width: 0 }}
                           animate={{ width: "100%" }}
@@ -154,10 +154,11 @@ const Projects = () => {
                       />
                     </motion.button>
                   ))}
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
+                </AnimatePresence>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
           <div className="mt-10 mb-5 flex ml-5">
             <p className="text-white text-lg xl:hidden">
               {"//"} projects

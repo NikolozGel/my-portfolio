@@ -23,7 +23,7 @@ const ProjectCard = ({
   github,
 }: IProjects) => {
   const [isHover, setIsHover] = useState(false);
-  console.log(isHover);
+
   return (
     <>
       <div className="w-[370px]">
