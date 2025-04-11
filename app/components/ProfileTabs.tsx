@@ -49,12 +49,12 @@ const ProfileTabs = ({
         )}
       </motion.button>
 
-      {activeSection && (
-        <AnimatePresence>
+      <AnimatePresence>
+        {activeSection && (
           <motion.button
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, y: -20 }}
+            exit={{ opacity: 0, x: -50 }}
             transition={{ duration: 0.7 }}
             className="w-[150px] py-4 border-r text-[#607b96] relative border-[#1e2d3d] flex justify-center items-center gap-2"
             onClick={() => handleTabClick("professional")}
@@ -79,8 +79,8 @@ const ProfileTabs = ({
               />
             )}
           </motion.button>
-        </AnimatePresence>
-      )}
+        )}
+      </AnimatePresence>
     </div>
   );
 };
