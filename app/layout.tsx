@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Fira_Code, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "./components/Yleoba-header";
+import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 const FiraCode = Fira_Code({
