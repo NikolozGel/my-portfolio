@@ -27,7 +27,9 @@ const ProjectCard = ({
   return (
     <>
       <div>
-        <p className="text-lg text-[#4D5BCE] mb-4 font-bold">Project {id}</p>
+        <p className="text-lg text-[#4D5BCE] mb-3 font-semibold">
+          Project {id}
+        </p>
         <AnimatePresence>
           <motion.div
             onHoverStart={() => setIsHover(true)}
@@ -36,7 +38,7 @@ const ProjectCard = ({
             whileHover={{ scale: 1.08 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="border-[0.2rem] border-[#1e2d3d] rounded-xl overflow-hidden">
+            <div className="border-[2px] border-[#1e2d3d] rounded-xl overflow-hidden">
               <Image
                 src={img}
                 width={410}
@@ -46,9 +48,9 @@ const ProjectCard = ({
               />
               <div className="bg-[#011221] p-12">
                 <p className="text-[#607B96]">{name}</p>
-                <div className="flex justify-between mt-3">
+                <div className="flex items-center justify-between mt-3">
                   <Link href={liveLink} target="_blank">
-                    <button className="bg-[#1C2B3A] text-white text-lg rounded-md py-2.5 px-3.5 hover:text-[#4D5BCE]">
+                    <button className="bg-[#1C2B3A] text-white text-lg rounded-md py-2.5 px-3.5 hover:text-[#4D5BCE] transition duration-300 ease-in-out">
                       view-project
                     </button>
                   </Link>

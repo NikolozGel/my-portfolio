@@ -84,42 +84,18 @@
     },
     {
       "id": 3,
-      "name": "interactive-rating-component",
-      "techstack": ["React", "Tailwind CSS", "TypeScript"],
+      "name": "Surrogacy and IVF Clinic",
+      "techstack": ["React", "Tailwind CSS", "TypeScript", "Node", "MongoDB"],
       "techStackImage": [
         "/assets/skills/reactLogo.png",
         "/assets/skills/typescript.png",
-        "/assets/skills/tailwind.png"
+        "/assets/skills/tailwind.png",
+        "/assets/skills/node.png",
+        "/assets/skills/mongo.webp"
       ],
-      "img": "/assets/projects/interactive-rating-component.png",
-      "liveLink": "https://interactive-rating-components-rho.vercel.app/",
-      "github": "https://github.com/NikolozGel/interactive-rating-components"
-    },
-    {
-      "id": 4,
-      "name": "interactive-rating-component",
-      "techstack": ["React", "Tailwind CSS", "TypeScript"],
-      "techStackImage": [
-        "/assets/skills/reactLogo.png",
-        "/assets/skills/typescript.png",
-        "/assets/skills/tailwind.png"
-      ],
-      "img": "/assets/projects/interactive-rating-component.png",
-      "liveLink": "https://interactive-rating-components-rho.vercel.app/",
-      "github": "https://github.com/NikolozGel/interactive-rating-components"
-    },
-    {
-      "id": 5,
-      "name": "interactive-rating-component",
-      "techstack": ["React", "Tailwind CSS", "TypeScript"],
-      "techStackImage": [
-        "/assets/skills/reactLogo.png",
-        "/assets/skills/typescript.png",
-        "/assets/skills/tailwind.png"
-      ],
-      "img": "/assets/projects/interactive-rating-component.png",
-      "liveLink": "https://interactive-rating-components-rho.vercel.app/",
-      "github": "https://github.com/NikolozGel/interactive-rating-components"
+      "img": "/assets/projects/surrogacy.png",
+      "liveLink": "https://surrogacy-and-egg-donation.vercel.app/#",
+      "github": "https://github.com/NikolozGel/Surrogacy-And-Egg-Donation"
     }
   ]
 }

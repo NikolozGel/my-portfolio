@@ -20,7 +20,7 @@ const AboutMeSection = ({
 
   const handleActiveSection = (val: "personal" | "professional") => {
     if (val === "professional") {
-      setActiveSection((prevInfo) => !prevInfo);
+      setActiveSection(true);
     }
   };
 

@@ -58,8 +58,8 @@ const ProfileTabs = ({
             transition={{ duration: 0.7 }}
             className="w-[150px] py-4 border-r text-[#607b96] relative border-[#1e2d3d] flex justify-center items-center gap-2"
             onClick={() => handleTabClick("professional")}
-            onMouseEnter={() => setIsProffesionalHover((prev) => !prev)}
-            onMouseLeave={() => setIsProffesionalHover((prev) => !prev)}
+            onMouseEnter={() => setIsProffesionalHover(true)}
+            onMouseLeave={() => setIsProffesionalHover(false)}
           >
             Professional
             <Image

@@ -7,7 +7,7 @@ import SnippetImage from "../public/assets/shared/code-snippet-no-opacity.svg";
 export default function Home() {
   return (
     <>
-      <section className="relative main xl:bg-[url(/assets/shared/bg-main-desktop.png)] bg-left bg-cover flex flex-col gap-5 bg-[#011627] border-[#1e2d3d] p-4 rounded-b-lg border-b h-[86vh] overflow-hidden xl:pt-28 xl:pl-24">
+      <section className="relative main xl:bg-[url(/assets/shared/bg-main-desktop.png)] bg-left bg-cover flex flex-col gap-5 bg-[#011627] border-[#1e2d3d] p-4 rounded-b-lg border-b h-[86vh] overflow-hidden xl:pt-28 xl:pl-20">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}

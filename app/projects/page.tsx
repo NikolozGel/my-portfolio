@@ -49,7 +49,7 @@ const Projects = () => {
 
   return (
     <div className="bg-[#011627] rounded-b-lg h-[86vh]">
-      <div className="xl:flex h-full w-full">
+      <div className="xl:flex h-full w-full overflow-y-scroll xl:overflow-auto">
         <aside className="border-r border-[#1e2d3d]">
           <h1 className="text-white font-semibold text-base pl-5 mb-5 pt-4">
             _projects
@@ -112,7 +112,7 @@ const Projects = () => {
           </nav>
         </aside>
 
-        <div className="xl:overflow-y-auto h-full w-full">
+        <div className="overflow-visible xl:overflow-y-auto h-full w-full">
           <AnimatePresence>
             {selectedTechStacks.length > 0 && (
               <motion.div
@@ -169,7 +169,7 @@ const Projects = () => {
               )}
             </p>
           </div>
-          <div className="px-4">
+          <div className="px-4 xl:mb-24">
             <div className="flex justify-evenly flex-wrap gap-24">
               {filteredProjects.map((project) => (
                 <ProjectCard key={project.id} {...project} />
@@ -177,7 +177,7 @@ const Projects = () => {
             </div>
             <Link href="https://github.com/NikolozGel" target="_blank">
               <div className="flex justify-center mt-10">
-                <button className="bg-[#5565E8] py-2.5 px-3.5 text-xl font-bold rounded-lg">
+                <button className="bg-[#5565E8] py-2.5 px-3.5 text-xl font-bold rounded-lg mb-10 hover:bg-[#011627] hover:text-[#5565E8] transition duration-500 ease-in-out">
                   SEE MORE ON GITHUB
                 </button>
               </div>
