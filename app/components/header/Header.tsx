@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import NavigationMenu from "./NavigationMenu";
+import NavigationMenu from "../NavigationMenu";
 import { AnimatePresence } from "framer-motion";
-import Navigation from "./Navigation";
+import Navigation from "../Navigation";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

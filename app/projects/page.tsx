@@ -48,15 +48,15 @@ const Projects = () => {
   };
 
   return (
-    <div className="bg-[#011627] border-x border-b rounded-b-lg border-[#1e2d3d] h-[86vh] overflow-y-auto">
-      <div className="xl:flex ">
-        <div className="border-r border-[#1e2d3d] xl:h-[85vh] xl:fixed">
+    <div className="bg-[#011627] border-x border-b rounded-b-lg border-[#1e2d3d] h-[86vh]">
+      <div className="xl:flex h-full w-full">
+        <aside className="border-r border-[#1e2d3d]">
           <h1 className="text-white font-semibold text-base pl-5 mb-5 pt-4">
             _projects
           </h1>
 
           <nav>
-            <ul className="xl:w-[250px]">
+            <ul className="xl:w-[300px]">
               <li className="text-white font-[450] flex flex-col bg-[#1E2D3D] pl-5 py-1 mb-2">
                 <button
                   onClick={() => setTechStacks((prev) => !prev)}
@@ -110,9 +110,9 @@ const Projects = () => {
               </AnimatePresence>
             </ul>
           </nav>
-        </div>
+        </aside>
 
-        <div className="xl:ml-[250px] w-full">
+        <div className="xl:overflow-y-auto h-full w-full">
           <AnimatePresence>
             {selectedTechStacks.length > 0 && (
               <motion.div

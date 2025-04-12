@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
-import gitHubIcon from "../../public/assets/contact-icons/github.svg";
-import FbIcon from "../../public/assets/contact-icons/facebook.svg";
-import Linkedin from "../../public/assets/contact-icons/linkedin.svg";
+import gitHubIcon from "../../../public/assets/contact-icons/github.svg";
+import FbIcon from "../../../public/assets/contact-icons/facebook.svg";
+import Linkedin from "../../../public/assets/contact-icons/linkedin.svg";
 
 const Footer = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
   return (
