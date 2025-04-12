@@ -148,7 +148,7 @@ const Projects = () => {
                         src={"/assets/shared/delete.png"}
                         width={12}
                         height={12}
-                        className="w-[12px] h-[12px] ml-5"
+                        className=" ml-5"
                         alt="deleteImage"
                         onClick={() => handleRemoveTech(tech)}
                       />

@@ -11,7 +11,7 @@ const CodeSnippet = ({
   const date = today.toString().split(" ").slice(0, 3).join(" ");
 
   return (
-    <div className=" w-[50%] hidden xl:block p-28">
+    <div className="w-[50%] hidden xl:block p-28 overflow-y-hidden">
       <div className="flex">
         <div className="text-gray-500 text-lg mr-5">
           1

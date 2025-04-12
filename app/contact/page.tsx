@@ -100,7 +100,7 @@ const Contact = () => {
             <AccordionFindMe />
           </Accordion>
         </div>
-        <div className="xl:w-[50%] relative border-r border-[#1e2d3d]">
+        <div className="xl:w-[50%] relative border-r border-[#1e2d3d] overflow-y-hidden">
           <ContactForm
             handleSubmit={handleSubmit}
             handleInputChange={handleInputChange}

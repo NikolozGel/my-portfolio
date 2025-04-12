@@ -17,12 +17,12 @@ export default function Home() {
           <p className="text-white mt-16 xl:text-xl text-lg mb-2">
             Hi All. I am
           </p>
-          <h1 className="text-[#E5E9F0] text-6xl xl:text-7xl font-medium break-words mb-1">
+          <h1 className="text-[#E5E9F0] text-6xl font-medium break-words mb-1">
             Nikoloz
             <br className="xl:hidden" /> Gelenidze
           </h1>
           <p className="text-md xl:text-3xl text-[#4d5bce] font-semibold">
-            {"> "}Front-End developer
+            {"> "}Software Developer
           </p>
         </motion.div>
 

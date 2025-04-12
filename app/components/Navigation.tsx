@@ -1,19 +1,34 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Navigation = () => {
+  const [activeTab, setActiveTab] = useState<
+    "_Hello" | "_About-me" | "_Projects" | "_Contact-me"
+  >();
+
+  useEffect(() => {
+    // როდესაც კომპონენტი დაიმონტაჟება, localStorage-დან ტაბის მნიშვნელობა წაიკითხე
+    const storedTab = localStorage.getItem("activeTab") as
+      | "_Hello"
+      | "_About-me"
+      | "_Projects"
+      | "_Contact-me"
+      | null;
+
+    if (storedTab) {
+      setActiveTab(storedTab); // თუ არის, გამოიყენე ის
+    }
+  }, []); // მხოლოდ კომპონენტის ჩატვირთვისას
+
   const handleTabClick = (
     tab: "_Hello" | "_About-me" | "_Projects" | "_Contact-me"
   ) => {
     if (activeTab !== tab) {
       setActiveTab(tab);
+      localStorage.setItem("activeTab", tab); // შენახვა localStorage-ში
     }
   };
-
-  const [activeTab, setActiveTab] = useState<
-    "_Hello" | "_About-me" | "_Projects" | "_Contact-me"
-  >("_Hello");
 
   return (
     <div className="hidden xl:flex xl:p-0">

@@ -42,7 +42,7 @@ const Footer = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
                 rel="noreferrer"
               >
                 <div className="border-l border-[#1E2D3D] p-3 xl:flex xl:items-center xl:gap-3">
-                  <span className="hidden xl:block text-gray-400">
+                  <span className="hidden xl:block text-[#607B96]">
                     @nikolozGel
                   </span>
 

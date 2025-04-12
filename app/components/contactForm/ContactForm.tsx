@@ -59,13 +59,13 @@ const ContactForm: React.FC<ContactFormProps> = ({
               id="message"
               name="message"
               onChange={handleInputChange}
-              className="bg-[#011221] rounded-[0.7rem] text-white border px-5 border-[#1e2d3d] h-[160px] pt-2"
+              className="bg-[#011221] rounded-[0.7rem] text-white border px-5 border-[#1e2d3d] h-[160px] pt-2 resize-none"
             />
           </div>
 
           <button
             type="submit"
-            className="mt-2 mb-5 bg-[#1c2b3a] rounded-lg text-white py-2 px-3 ml-36"
+            className="mt-2 mb-5 bg-[#1c2b3a] rounded-lg text-white py-2 px-3 ml-36 hover:text-[#4B5DCE] transition-[3s]"
           >
             submit-message
           </button>

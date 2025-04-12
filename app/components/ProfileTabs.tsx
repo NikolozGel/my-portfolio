@@ -28,8 +28,8 @@ const ProfileTabs = ({
         transition={{ duration: 0.7 }}
         className="w-[150px] py-4 border-r text-[#607b96] relative border-[#1e2d3d] flex justify-center items-center gap-2"
         onClick={() => (handleTabClick("personal"), activeTab === "personal")}
-        onMouseEnter={() => setIsPersonalHover(true)}
-        onMouseLeave={() => setIsPersonalHover(false)}
+        onMouseEnter={() => setIsPersonalHover((prev) => !prev)}
+        onMouseLeave={() => setIsPersonalHover((prev) => !prev)}
       >
         Personal
         <Image
@@ -58,8 +58,8 @@ const ProfileTabs = ({
             transition={{ duration: 0.7 }}
             className="w-[150px] py-4 border-r text-[#607b96] relative border-[#1e2d3d] flex justify-center items-center gap-2"
             onClick={() => handleTabClick("professional")}
-            onMouseEnter={() => setIsProffesionalHover(true)}
-            onMouseLeave={() => setIsProffesionalHover(false)}
+            onMouseEnter={() => setIsProffesionalHover((prev) => !prev)}
+            onMouseLeave={() => setIsProffesionalHover((prev) => !prev)}
           >
             Professional
             <Image
@@ -68,7 +68,7 @@ const ProfileTabs = ({
               height={0}
               className="w-[12px] h-[12px]"
               alt="deleteImage"
-              onClick={() => setActiveSection(false)}
+              onClick={() => setActiveSection((prev) => !prev)}
             />
             {isProffesionalHover && (
               <motion.div
