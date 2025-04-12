@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import gitHubIcon from "../../public/assets/contact-icons/github.svg";
 import FbIcon from "../../public/assets/contact-icons/facebook.svg";
 import Linkedin from "../../public/assets/contact-icons/linkedin.svg";
@@ -8,11 +7,7 @@ import Linkedin from "../../public/assets/contact-icons/linkedin.svg";
 const Footer = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
   return (
     <>
-      <motion.footer
-        initial={{ opacity: 0, y: 0 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: 0 }}
-        transition={{ duration: 0.9 }}
+      <footer
         className={`${
           isMenuOpen ? "block" : "hidden xl:block"
         } border-t xl:border border-[#1E2D3D] bg-[#011627] rounded-b-lg bottom-0 absolute w-full`}
@@ -62,7 +57,7 @@ const Footer = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
             </div>
           </div>
         </div>
-      </motion.footer>
+      </footer>
     </>
   );
 };

@@ -19,7 +19,7 @@ const NavigationMenu = ({
           exit={{ opacity: 0, y: -200 }}
           transition={{ duration: 0.4, ease: "linear" }}
         >
-          <li className="text-white pl-4 py-4 border-b border-[#1E2D3D]">
+          <li className="text-white pl-4 py-4 border-y border-[#1E2D3D]">
             <Link
               onClick={() => setIsMenuOpen(false)}
               href="/"

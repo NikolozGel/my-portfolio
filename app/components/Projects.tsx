@@ -26,7 +26,7 @@ const ProjectCard = ({
 
   return (
     <>
-      <div className="w-[370px]">
+      <div>
         <p className="text-lg text-[#4D5BCE] mb-4 font-bold">Project {id}</p>
         <AnimatePresence>
           <motion.div

@@ -169,7 +169,7 @@ const Projects = () => {
               )}
             </p>
           </div>
-          <div className="px-[6.25rem] mb-48">
+          <div className="px-4">
             <div className="flex justify-evenly flex-wrap gap-24">
               {filteredProjects.map((project) => (
                 <ProjectCard key={project.id} {...project} />
