@@ -48,7 +48,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="bg-[#011627] border-x border-b rounded-b-lg border-[#1e2d3d] h-[86vh]">
+    <div className="bg-[#011627] rounded-b-lg h-[86vh]">
       <div className="xl:flex h-full w-full">
         <aside className="border-r border-[#1e2d3d]">
           <h1 className="text-white font-semibold text-base pl-5 mb-5 pt-4">
@@ -116,7 +116,7 @@ const Projects = () => {
           <AnimatePresence>
             {selectedTechStacks.length > 0 && (
               <motion.div
-                className=" hidden xl:flex border-b w-full border-[#1e2d3d]"
+                className="hidden xl:flex border-b w-full border-[#1e2d3d]"
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}

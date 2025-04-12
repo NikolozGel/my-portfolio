@@ -78,7 +78,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-[#011627] border-x border-b rounded-b-lg border-[#1e2d3d] relative h-[86vh] overflow-y-auto scroll-container">
+    <div className="bg-[#011627] rounded-b-lg relative h-[86vh] overflow-y-auto scroll-container">
       <div className="xl:flex h-full">
         <div className="xl:w-[25%] border-r border-[#1e2d3d]">
           <h1 className="text-white font-semibold text-base pl-5 my-5">
