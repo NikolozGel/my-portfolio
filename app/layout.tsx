@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${FiraCode.className} relative font-sans ${geistSans.variable} ${geistMono.variable} antialiased bg-[#010C15]`}
+        className={`${FiraCode.className} relative font-sans ${geistSans.variable} ${geistMono.variable} p-8 antialiased bg-[#010C15]`}
       >
         <Header />
         <main className="h-[86vh] bg-[#011627] border-x border-b border-[#1e2d3d] overflow-hidden rounded-b-lg">
