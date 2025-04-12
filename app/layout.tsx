@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Fira_Code, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Footer from "./components/footer";
-import Header from "./components/header";
-
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 const FiraCode = Fira_Code({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -35,7 +34,9 @@ export default function RootLayout({
         className={`${FiraCode.className} relative font-sans ${geistSans.variable} ${geistMono.variable} antialiased bg-[#010C15]`}
       >
         <Header />
-        <main>{children}</main>
+        <main className="h-[86vh] bg-[#011627] border-x border-[#1e2d3d] overflow-hidden rounded-b-lg">
+          {children}
+        </main>
         <div className="hidden lg:block absolute left-8 right-8">
           <Footer isMenuOpen={false} />
         </div>

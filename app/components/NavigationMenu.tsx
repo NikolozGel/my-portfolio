@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Footer from "./footer";
+import Footer from "./Footer";
 import { AnimatePresence, motion } from "framer-motion";
 import { Dispatch, SetStateAction } from "react";
 
