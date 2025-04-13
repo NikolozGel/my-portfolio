@@ -21,7 +21,7 @@ export default function Home() {
             Nikoloz
             <br className="xl:hidden" /> Gelenidze
           </h1>
-          <p className="text-md xl:text-3xl text-[#4d5bce] font-semibold">
+          <p className="text-md xl:text-3xl text-[#4d5bce] font-bold">
             {"> "}Software Developer
           </p>
         </motion.div>
@@ -39,10 +39,10 @@ export default function Home() {
                 {"// "}find my profile on Github:{" "}
               </p>
             </div>
-            <span className="text-[#4D5BCE] xl:text-2xl font-bold">const </span>
-            <span className="text-[#43D9AD] xl:text-2xl">githubLink </span>
-            <span className="text-white xl:text-2xl"> = </span>
-            <span className="break-words text-[#e99287] xl:text-2xl underline">
+            <span className="text-[#4D5BCE] xl:text-lg font-bold">const </span>
+            <span className="text-[#43D9AD] xl:text-lg">githubLink </span>
+            <span className="text-white xl:text-lg"> = </span>
+            <span className="break-words text-[#e99287] xl:text-xl underline">
               <Link href="https://github.com/nikolozgel" target="_blank">
                 https://
                 <br className="xl:hidden" />
