@@ -32,13 +32,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${FiraCode.className} relative font-sans ${geistSans.variable} ${geistMono.variable} p-8 antialiased bg-[#010C15]`}
+        className={`${FiraCode.className} relative font-sans ${geistSans.variable} ${geistMono.variable} px-12 pt-5 antialiased bg-[#010C15]`}
       >
         <Header />
         <main className="h-[86vh] bg-[#011627] border-x border-b border-[#1e2d3d] overflow-hidden rounded-b-lg">
           {children}
         </main>
-        <div className="hidden lg:block absolute left-8 right-8">
+        <div className="hidden lg:block absolute left-12 right-12">
           <Footer isMenuOpen={false} />
         </div>
       </body>
