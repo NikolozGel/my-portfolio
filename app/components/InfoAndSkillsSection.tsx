@@ -29,8 +29,8 @@ const InfoAndSkillsSection = ({
               layout
             >
               {activeTab === "professional"
-                ? "/* As a Software developer, I am constantly striving to improve my skills and learn new technologies. I stepped into this big Tech world 2 years ago and I found myself very flexible and adaptive to learning new things. */"
-                : "/* Hi, I am Nikoloz Gelenidze, 25 years old from Tbilisi, Georgia. I can confidently say that I am a highly motivated and goal-oriented individual who consistently strives to achieve his objectives every single day. */"}
+                ? "/* As a Front end Engineer, I am constantly striving to improve my skills and learn new technologies. I stepped into this big Tech world 2 years ago and I found myself very flexible and adaptive to learning new things. */"
+                : `/* Hi, I am Nikoloz Gelenidze, ${age} years old from Tbilisi, Georgia. I can confidently say that I am a highly motivated and goal-oriented individual who consistently strives to achieve his objectives every single day. */`}
             </motion.div>
           )}
         </AnimatePresence>
@@ -85,3 +85,21 @@ const InfoAndSkillsSection = ({
 };
 
 export default InfoAndSkillsSection;
+
+function calculateAge(birthDate: string) {
+  const today = new Date();
+  const birthDateObj = new Date(birthDate);
+  let age = today.getFullYear() - birthDateObj.getFullYear();
+  const monthDifference = today.getMonth() - birthDateObj.getMonth();
+
+  if (
+    monthDifference < 0 ||
+    (monthDifference === 0 && today.getDate() < birthDateObj.getDate())
+  ) {
+    age--;
+  }
+
+  return age;
+}
+
+const age = calculateAge("1998-11-19");
