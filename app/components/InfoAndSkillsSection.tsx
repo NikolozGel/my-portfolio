@@ -78,6 +78,7 @@ const InfoAndSkillsSection = ({
             </div>
           ))}
         </div>
+        {/* <button className="mt-5">Download CV <Image width={} height={} src={} alt="" /> </button> */}
       </div>
     </div>
   );

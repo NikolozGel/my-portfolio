@@ -56,7 +56,7 @@ export default function Home() {
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="hidden xl:flex flex-col gap-[10px] absolute right-[10%] top-[7%]"
+          className="hidden xl:flex flex-col gap-[10px] absolute right-[10%] top-[3%]"
         >
           {[
             Array.from({ length: 3 }, (_, index) => (

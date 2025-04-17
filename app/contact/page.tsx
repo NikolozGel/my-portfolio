@@ -80,7 +80,7 @@ const Contact = () => {
   return (
     <div className="bg-[#011627] rounded-b-lg relative h-[86vh] overflow-y-auto scroll-container">
       <div className="xl:flex h-full">
-        <div className="xl:w-[25%] border-r border-[#1e2d3d]">
+        <div className="xl:w-[30%] border-r border-[#1e2d3d]">
           <h1 className="text-white font-semibold text-base pl-5 my-5">
             _contact-me
           </h1>
@@ -109,7 +109,6 @@ const Contact = () => {
             setSubmit={setSubmit}
           />
         </div>
-
         <CodeSnippet formData={formData} />
       </div>
     </div>

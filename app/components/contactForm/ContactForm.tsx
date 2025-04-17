@@ -28,7 +28,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
         <Submit setSubmit={setSubmit} />
       ) : (
         <form onSubmit={handleSubmit} className="h-full">
-          <div className="flex flex-col p-5 xl:px-36">
+          <div className="flex flex-col p-5 xl:px-20">
             <label htmlFor="name" className="text-[#607b96] mb-1 font-medium">
               _name:
             </label>

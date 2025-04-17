@@ -13,7 +13,7 @@ const AccordionContact = () => {
             alt="mail"
             className="mr-3"
           />
-          <p className="text-[#607b96] font-semibold">
+          <p className="text-[#607b96] font-semibold hover:opacity-60 transition duration-300 ease-in-out">
             nikolozgelenidze9@gmail.com
           </p>
         </li>
@@ -27,7 +27,9 @@ const AccordionContact = () => {
             alt="phone-icon"
             className="mr-3"
           />
-          <p className="text-[#607b96] font-semibold">+(995) 511 10 60 81</p>
+          <p className="text-[#607b96] font-semibold hover:opacity-60 transition duration-300 ease-in-out">
+            +(995) 511 10 60 81
+          </p>
         </li>
       </Link>
     </ul>

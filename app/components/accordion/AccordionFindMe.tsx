@@ -1,31 +1,35 @@
 import Link from "next/link";
 import Image from "next/image";
+import sharedImg from "../../../public/assets/shared/link.png";
 
 const AccordionFindMe = () => {
   return (
     <ul className="flex flex-col gap-1 pt-2">
       {[
         {
-          src: "/assets/shared/link.png",
+          src: sharedImg,
           alt: "Facebook",
           text: "Facebook",
           link: "https://www.facebook.com/NikolozGG/",
         },
         {
-          src: "/assets/shared/link.png",
+          src: sharedImg,
           alt: "Instagram",
           text: "Instagram",
           link: "https://www.instagram.com/nikushagelenidze/",
         },
         {
-          src: "/assets/shared/link.png",
+          src: sharedImg,
           alt: "LinkedIn",
           text: "LinkedIn",
           link: "https://www.linkedin.com/in/nikoloz-gelenidze/",
         },
       ].map(({ src, alt, text, link }) => (
-        <li key={alt}>
-          <Link href={link} className="flex items-center ml-5" target="_blank">
+        <li
+          key={alt}
+          className="hover:opacity-60 transition duration-300 ease-in-out"
+        >
+          <Link href={link} className="flex items-center ml-5" target="_blank ">
             <Image
               src={src}
               width={10}
