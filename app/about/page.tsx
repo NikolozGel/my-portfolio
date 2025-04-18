@@ -15,7 +15,7 @@ const About = () => {
   };
 
   return (
-    <div className="bg-[#011627]  border-b rounded-b-lg h-[86vh] relative">
+    <div className="bg-[#011627] border-b border-[#1e2d3d] rounded-b-lg h-[86vh] relative">
       <div className="xl:flex absolute top-0 left-0 w-full h-full">
         <AboutMeSection
           handleTabClick={handleTabClick}

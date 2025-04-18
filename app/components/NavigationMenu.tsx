@@ -12,7 +12,7 @@ const NavigationMenu = ({
 }) => {
   return (
     <>
-      <nav className="bg-[#011627] xl:hidden absolute top-[3.6rem] left-0 right-0 h-[85.8vh] rounded-b-lg z-50 flex flex-col overflow-hidden">
+      <nav className="bg-[#011627] xl:hidden absolute top-[3.6rem] left-0 right-0 h-[86.3vh] rounded-b-lg z-50 flex flex-col overflow-hidden">
         <motion.div
           initial={{ opacity: 0, y: -200 }}
           animate={{ opacity: 1, y: 0 }}
