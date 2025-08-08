@@ -14,7 +14,6 @@ const CodeSnippet = ({
     <div className="w-[50%] hidden xl:block px-28 mt-12 overflow-y-hidden">
       <div className="flex">
         <div className="text-gray-500 text-lg mr-5">
-          1
           <br />
           2
           <br />
