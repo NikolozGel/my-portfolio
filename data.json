@@ -85,17 +85,15 @@
     {
       "id": 3,
       "name": "Surrogacy and IVF Clinic",
-      "techstack": ["React", "Tailwind CSS", "TypeScript", "Node", "MongoDB"],
+      "techstack": ["Next", "Tailwind CSS", "TypeScript"],
       "techStackImage": [
-        "/assets/skills/reactLogo.png",
+        "/assets/skills/next.svg",
         "/assets/skills/typescript.png",
-        "/assets/skills/tailwind.png",
-        "/assets/skills/node.png",
-        "/assets/skills/mongo.webp"
+        "/assets/skills/tailwind.png"
       ],
-      "img": "/assets/projects/surrogacy.png",
-      "liveLink": "https://surrogacy-and-egg-donation.vercel.app/#",
-      "github": "https://github.com/NikolozGel/Surrogacy-And-Egg-Donation"
+      "img": "/assets/projects/ivf.png",
+      "liveLink": "https://www.ivfertilitygeorgia.com/",
+      "github": "https://github.com/NikolozGel/surrogacy-and-egg-donation."
     }
   ]
 }
